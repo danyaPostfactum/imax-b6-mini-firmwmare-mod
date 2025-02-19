@@ -21729,10 +21729,10 @@ code_6AB0:                              ; CODE XREF: code:6A8A↑j
                 mov     DPTR, #XRAM_821
                 lcall   code_1B7B
                 inc     DPTR
-                mov     A, #0Bh
+                mov     A, #7
                 movx    @DPTR, A
                 inc     DPTR
-                mov     A, #54h ; 'T'
+                mov     A, #0D0h
                 movx    @DPTR, A
                 sjmp    code_6B07
 ; ---------------------------------------------------------------------------
@@ -22634,17 +22634,17 @@ code_6FA8:                              ; CODE XREF: check_program_params+5↑j
 code_6FBC:                              ; CODE XREF: check_program_params+6A↑j
                 clr     C
                 mov     A, R7
-                subb    A, #54h ; 'T'
+                subb    A, #0D0h
                 mov     A, R6
-                subb    A, #0Bh
+                subb    A, #7
                 mov     DPTR, #XRAM_238
                 jnc     code_6FD1
 
 code_6FC8:                              ; CODE XREF: check_program_params+6F↑j
-                mov     A, #0Ch
+                mov     A, #0Ah
                 movx    @DPTR, A
                 inc     DPTR
-                mov     A, #1Ch
+                mov     A, #0F0h
                 movx    @DPTR, A
                 sjmp    code_6FD6
 ; ---------------------------------------------------------------------------
@@ -22670,7 +22670,7 @@ code_6FD6:                              ; CODE XREF: check_program_params+84↑j
                 lcall   code_191D
                 jnz     code_6FF8
                 lcall   code_1B83
-                mov     A, #4
+                mov     A, #68h ; 'h'
                 movx    @DPTR, A
 
 code_6FF8:                              ; CODE XREF: check_program_params+A5↑j
