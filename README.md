@@ -17,6 +17,10 @@ Use `DFU` utility to flash a firmware bin file (connect the charger to USB while
 1. `v1.19-mod-DC-20V.bin` - DC input max voltage is changed from 18V (18.5V) to 20V (20.5V)
 2. `v1.19-mod-DC-20V-LiIo-2.0V.bin` - DC input 20V + extended LiIo voltage range. The default LiIo program range is changed from 3.1V-4.1V to 2.8V-4.2V. As far as I know, this range is commonly used to test Li-Ion batteries and implemented in most chargers. The minimum discharge voltage for custom LiIo program is changed from 2.9V to 2.0V. Most Li-Ion battery manufacturers specify 2.0V, 2.5V or 2.75V cut-off voltage. Be carefulб some Li-Ion batteries can be damaged by low voltages.
 
+# Known bugs
+- Lithium default programs don't reset discharge voltage and use previously used value (if it's allowed by program range). Be careful and always check cut-off discharge voltage or just restart your charger every time.
+- The charger does not correctly measure battery voltage when idle. You can notice this in ChargerMaster PC software. If you enter BATT METER, the voltage is correct. Most likely it's related to `BAT-` MOSFET.
+
 # Some useful links
 - https://www.skyrc.com/iMAX_B6mini_Charger
 - https://rcsearch.ru/wiki/IMAX_B6_Mini
