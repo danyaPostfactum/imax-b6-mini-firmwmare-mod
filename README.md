@@ -12,6 +12,10 @@ The stock firwmware bin file (named as `133`) is extracted from B6mini_Firmware_
 The MCU description (ports, interrupts, memory areas) for IDA pro is located in `i51.cfg` file (you should add the file contents to your default `i51.cfg` file).
 I have located some interesting parts of firmware (ADC related).
 
+# Modified stock firmware
+Use `DFU` utility to flash a firmware bin file (connect the charger to USB while holding START button).
+1. `v1.19-mod-DC-20V.bin` - DC input max voltage is changed from 18V (18.5V) to 20V (20.5V)
+
 # Some useful links
 - https://www.skyrc.com/iMAX_B6mini_Charger
 - https://rcsearch.ru/wiki/IMAX_B6_Mini

@@ -28929,10 +28929,10 @@ check_too_hi_voltage:                   ; CODE XREF: show_error_message+22↑j
                 setb    C
                 mov     DPTR, #XRAM_2E0
                 movx    A, @DPTR
-                subb    A, #44h ; 'D'
+                subb    A, #14h
                 mov     DPTR, #XRAM_2DF
                 movx    A, @DPTR
-                subb    A, #48h ; 'H'
+                subb    A, #50h ; 'P'
                 jc      more
                 mov     DPTR, #38Ah
                 mov     A, #4
